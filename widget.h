@@ -17,8 +17,15 @@ public:
 protected:
     void keyPressEvent(QKeyEvent *event);
     MyLineEdit *line;
+    void mousePressEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
+    void mouseDoubleClickEvent(QMouseEvent *event);
+    void wheelEvent(QWheelEvent *event);
+
 private:
     Ui::Widget *ui;
+    QPoint offset;
 
 };
 #endif // WIDGET_H
